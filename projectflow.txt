@@ -14,6 +14,8 @@
     docker push <your-dockerhub-username>/flask-hello:latest
 10. If image is pushed to dockerhub and k8s config files are pushed to git then move ahead.
 
+docker run -p 5000:5000 Naman12769/flask-hello:latest
+
 11. Open powershell as admin -> "minikube start"
     >> Check status of the cluster -> "minikube cluster"
     >> Create namespace -> kubectl create namespace argocd
