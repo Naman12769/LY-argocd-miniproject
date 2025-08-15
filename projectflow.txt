@@ -24,7 +24,7 @@ docker run -p 5000:5000 Naman12769/flask-hello:latest
     >> Expose the ArgoCD server (for local dev) - By default, ArgoCD server is ClusterIP (internal only), so let’s patch it to 
     NodePort (so you can access it via your browser): kubectl patch svc argocd-server -n argocd -p '{\"spec\": {\"type\": \"NodePort\"}}'
     >> Now find the port and access it -> minikube service argocd-server -n argocd --url (for minikube) 
-                                          kubectl get svc argocd-server -n argocd (otherwise - eg EKS)
+     kubectl get svc argocd-server -n argocd (otherwise - eg EKS)
     >> You'll see a warning on the browser: That's totally expected — you're seeing this warning because ArgoCD uses self-signed 
     TLS certificates, and browsers don't trust those by default.
     >> Now use -> 
